@@ -154,7 +154,7 @@ def load_vectorizer():
     vectorizer.idf_ = np.array(meta["idf"])
     return vectorizer
  
-def retrieve(question, top_k=3):
+def retrieve(question, top_k=7):
     store      = load_store()
     vectorizer = load_vectorizer()
     q_vec      = vectorizer.transform([question]).toarray()[0].tolist()
