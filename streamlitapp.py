@@ -140,7 +140,7 @@ if user_input:
     with st.spinner("Searching documents..."):
         answer, sources = rag_answer(
             user_input,
-            st.session_state.history[-10:]
+            st.session_state.history[-5:]
         )
 
     # Add bot reply
